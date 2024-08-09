@@ -15,6 +15,7 @@ use Pion\Laravel\ChunkUpload\Handler\ChunksInRequestSimpleUploadHandler;
 use Pion\Laravel\ChunkUpload\Handler\ChunksInRequestUploadHandler;
 use Pion\Laravel\ChunkUpload\Handler\ContentRangeUploadHandler;
 use Pion\Laravel\ChunkUpload\Handler\DropZoneUploadHandler;
+use Pion\Laravel\ChunkUpload\Handler\FilePondUploadHandler;
 use Pion\Laravel\ChunkUpload\Handler\HandlerFactory;
 use Pion\Laravel\ChunkUpload\Handler\NgFileUploadHandler;
 use Pion\Laravel\ChunkUpload\Handler\ResumableJSUploadHandler;
@@ -74,6 +75,7 @@ class ChunkUploadServiceProviderMockTest extends Mockery\Adapter\Phpunit\Mockery
             DropZoneUploadHandler::class,
             ChunksInRequestSimpleUploadHandler::class,
             NgFileUploadHandler::class,
+            FilePondUploadHandler::class
         ], HandlerFactory::getHandlers());
     }
 
@@ -102,6 +104,7 @@ class ChunkUploadServiceProviderMockTest extends Mockery\Adapter\Phpunit\Mockery
             DropZoneUploadHandler::class,
             ChunksInRequestSimpleUploadHandler::class,
             NgFileUploadHandler::class,
+            FilePondUploadHandler::class,
             SingleUploadHandler::class,
             SingleUploadHandler::class,
         ], HandlerFactory::getHandlers());

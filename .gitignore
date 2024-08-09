@@ -4,4 +4,6 @@ composer.phar
 composer.lock
 /build
 .phpunit.result.cache
+.phpunit.cache
 .php_cs.cache
+.idea
